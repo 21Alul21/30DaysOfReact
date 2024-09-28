@@ -1,0 +1,16 @@
+*{
+ 
+  padding: 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.book-list{
+  width: 80%;
+  background-color: rgb(250, 248, 246);
+  color: rgb(43, 41, 41);
+ 
+  padding: 20px;
+  
+  
+}
