@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Home from "./pages/about";
-import About from "./pages/home";
-import {Routes, Route} from 'reac-router-dom';
+import About from "./pages/about";
+import Home from "./pages/home";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   // useEffect(() => {
@@ -81,8 +81,25 @@ function App() {
         INCREMENT AND DECREAMENT USING USETATE COMPONENT HOOK
       </p>
       <DecrementIncrementCounter />
-      <About />
-      <Home />
+
+      <ul>
+        <li>
+          <Link to="/">
+            <button>Home Button</button>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/about">
+            <button>About Button</button>
+          </Link>
+        </li>
+      </ul>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
